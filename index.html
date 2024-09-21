@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자스 필수패턴 10 -돔요소 선택하기</title>
+  </head>
+
+  <body>
+    <section>
+      <article>box1</article>
+      <article>box2</article>
+      <article>box3</article>
+
+      <ul>
+        <li>button1</li>
+        <li class="btn">button2</li>
+        <li>button3</li>
+      </ul>
+    </section>
+
+    <script>
+      const section = document.querySelector("section");
+      const articles = section.querySelectorAll("article");
+      const btn = section.querySelector(".btn");
+      const childEl = section.children;
+      const parentEl = btn.parentElement;
+      const grandParentEl = btn.closest("section");
+      const prevEl = btn.previousElementSibling;
+      const nextEl = btn.nextElementSibling;
+      console.log(grandParentEl);
+    </script>
+  </body>
+</html>
